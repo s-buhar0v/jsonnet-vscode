@@ -10,14 +10,75 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:jsonnet-vscode.helloWorld"
+    "onCommand:jsonnet-vscode.helloWorld",
+    "onLanguage:jsonnet",
+    "onCommand:jsonnet.previewToSide",
+    "onCommand:jsonnet.preview"
   ],
+  "configuration": {
+    "properties": {
+      "jsonnet.executablePath": {
+        "default": null,
+        "description": "Location of the `jsonnet` executable.",
+        "type": "string"
+      },
+      "jsonnet.extStrs": {
+        "default": null,
+        "description": "External strings to pass to `jsonnet` executable.",
+        "type": "object"
+      },
+      "jsonnet.libPaths": {
+        "default": [],
+        "description": "Additional paths to search for libraries when compiling Jsonnet code.",
+        "type": "array"
+      },
+      "jsonnet.outputFormat": {
+        "default": "yaml",
+        "description": "Preview output format (yaml / json)",
+        "enum": [
+          "json",
+          "yaml"
+        ]
+      }
+    },
+    "title": "Jsonnet configuration",
+    "type": "object"
+  },
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "jsonnet-vscode.helloWorld",
         "title": "Hello World"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "jsonnet",
+        "path": "./syntaxes/jsonnet.tmLanguage.json",
+        "scopeName": "source.jsonnet"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "jsonnet.previewToSide",
+        "key": "shift+ctrl+i",
+        "mac": "shift+cmd+i",
+        "when": "editorFocus"
+      }
+    ],
+    "languages": [
+      {
+        "aliases": [
+          "Jsonnet",
+          "jsonnet"
+        ],
+        "configuration": "./language-configuration.json",
+        "extensions": [
+          ".jsonnet",
+          ".libsonnet"
+        ],
+        "id": "jsonnet"
       }
     ]
   },
