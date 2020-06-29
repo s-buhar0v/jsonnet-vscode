@@ -23,3 +23,9 @@
 - create jsonnet debugger?
 - implement treeview
 - reverse heptio's AST compiler code
+
+## links
+- https://code.visualstudio.com/api/references/extension-manifest
+- https://code.visualstudio.com/api/references/contribution-points
+- https://code.visualstudio.com/api/references/activation-events
+- https://code.visualstudio.com/api/references/vscode-api
