@@ -91,7 +91,7 @@
     "test": "node ./out/test/runTest.js",
     "vscode:prepublish": "webpack --mode production",
     "webpack": "webpack --mode development",
-    "webpack-watch": "webpack --mode development --watch",
+    "webpack-watch": "webpack --mode development --watch"
   },
   "devDependencies": {
     "@types/glob": "^7.1.1",
