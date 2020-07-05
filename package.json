@@ -101,6 +101,7 @@
     "@typescript-eslint/eslint-plugin": "^2.30.0",
     "@typescript-eslint/parser": "^2.30.0",
     "eslint": "^6.8.0",
+    "eslint-config-google": "^0.14.0",
     "glob": "^7.1.6",
     "mocha": "^7.1.2",
     "ts-loader": "^7.0.5",
@@ -110,5 +111,11 @@
     "vscode-test": "^1.4.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "google"
+    ]
   }
 }
