@@ -18,15 +18,15 @@
     },
     {
       "type": "npm",
-      "script": "webpack-watch",
+      "script": "watch",
       "isBackground": true,
       "presentation": {
         "reveal": "silent"
       },
       "group": "build",
       "problemMatcher": "$tsc-watch",
-      "label": "npm: webpack-watch",
-      "detail": "webpack --mode development --watch"
+      "label": "npm:watch",
+      "detail": "watch: tsc -b -w"
     }
   ]
 }
