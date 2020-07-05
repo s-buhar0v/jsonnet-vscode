@@ -84,7 +84,7 @@
   },
   "scripts": {
     "compile-dev": "tsc -b",
-		"watch": "tsc -b -w",
+    "watch": "tsc -b -w",
     "compile": "webpack --mode development",
     "lint": "eslint src --ext ts",
     "pretest": "npm run compile-dev && npm run lint",
